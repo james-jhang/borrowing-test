@@ -1,6 +1,7 @@
 import pytest
 import configparser
 from item.item_test_helper import ItemTestHelper
+from user.member.member_test_helper import MemberTestHelper
 
 @pytest.fixture(scope='session')
 def sut_addr():
@@ -14,3 +15,7 @@ def sut_addr():
 @pytest.fixture(scope='package')
 def item_test_helper(sut_addr):
     return ItemTestHelper(sut_addr)
+
+@pytest.fixture(scope='package')
+def member_test_helper(sut_addr):
+    return MemberTestHelper(sut_addr)
