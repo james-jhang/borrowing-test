@@ -6,12 +6,13 @@ class MemberTestHelper:
 
     def register(self, member_data):
         return requests.post(
-            url=self.sut_addr+'/api/users/register',
+            url=self.sut_addr+'/api/members/register',
             json=member_data
         ).json()
     
     def delete(self, member_id):
+        # TODO there has not an api for deleting members yet.
         return requests.delete(
-            url=self.sut_addr+'/api/users',
+            url=self.sut_addr+'/api/members',
             params={'id': member_id}
         )
