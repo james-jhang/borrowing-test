@@ -16,3 +16,12 @@ class MemberTestHelper:
             url=self.sut_addr+'/api/members',
             params={'id': member_id}
         )
+    
+    def reserve(self, user, item):
+        return requests.post(
+            url=self.sut_addr+'/api/members/reserve',
+            json={
+                'userID': user['id'],
+                'itemID': item['id']
+            }
+        ).json()
