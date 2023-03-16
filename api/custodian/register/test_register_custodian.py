@@ -1,4 +1,4 @@
-from user.custodian.custodian_test_helper import CustodianTestHelper
+from custodian.custodian_test_helper import CustodianTestHelper
 
 class TestRegisterCustodian:
 
