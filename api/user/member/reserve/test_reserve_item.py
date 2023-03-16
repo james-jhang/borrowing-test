@@ -12,9 +12,13 @@ class TestReserveItem:
         }
         rmember = member_test_helper.register(member)
         citem = item_test_helper.create_an_item(item)
-        reservation = member_test_helper.reserve(rmember, citem)
-        
-        assert reservation['userID'] == rmember['id']
-        assert reservation['itemID'] == citem['id']
+        reservation = member_test_helper.reserve(
+            rmember, citem, "2022/01/01", "2022/01/03"
+        )
+
         assert 'id' in reservation
         assert reservation['id'] != None
+        assert reservation['userID'] == rmember['id']
+        assert reservation['itemID'] == citem['id']
+        assert reservation['startDate'] == "2022/01/01"
+        assert reservation['endDate'] == "2022/01/03"
