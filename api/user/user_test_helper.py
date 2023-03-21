@@ -4,6 +4,7 @@ class UserTestHelper:
     def __init__(self, sut_addr):
         self.sut_addr = sut_addr
 
+    # TODO passing value is better than passing json data
     def register(self, user_data):
         return requests.post(
             url=self.sut_addr+'/api/users/register',
