@@ -8,7 +8,7 @@ class TestCreateAnItem:
         }
         created_item = item_test_helper.create_an_item(item)
         assert '等身立鏡' == created_item['name']
-        assert 'id' in created_item
-        assert None != created_item['id']
+        assert 'itemID' in created_item
+        assert None != created_item['itemID']
 
-        item_test_helper.delete_item(created_item['id'])
+        item_test_helper.delete_item(created_item['itemID'])

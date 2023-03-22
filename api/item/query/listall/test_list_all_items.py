@@ -13,10 +13,10 @@ class TestListAllItems:
         assert len(item_list) == 2
         self.__the_list_should_contain_items(item_list, eraser, rag)
 
-        item_test_helper.delete_item(eraser['id'])
-        item_test_helper.delete_item(rag['id'])
+        item_test_helper.delete_item(eraser['itemID'])
+        item_test_helper.delete_item(rag['itemID'])
 
     def __the_list_should_contain_items(self, item_list, *items):
-        item_ids = list(map(lambda item: item['id'], item_list))
+        item_ids = list(map(lambda item: item['itemID'], item_list))
         for item in items:
-            assert item['id'] in item_ids
+            assert item['itemID'] in item_ids

@@ -15,8 +15,8 @@ class CustodianTestHelper:
         return requests.post(
             url=self.sut_addr + '/api/custodians/deliver',
             json={
-                'custodianID': custodian['id'],
-                'userID': user['id'],
-                'reservationID': reservation['id']
+                'custodianID': custodian['custodianID'],
+                'userID': user['userID'],
+                'reservationID': reservation['reservationID']
             }
         ).json()

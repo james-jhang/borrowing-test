@@ -22,8 +22,8 @@ class UserTestHelper:
         return requests.post(
             url=self.sut_addr+'/api/users/reserve',
             json={
-                'userID': user['id'],
-                'itemID': item['id'],
+                'userID': user['userID'],
+                'itemID': item['itemID'],
                 'startDate': start_date,
                 'endDate': end_date
             }

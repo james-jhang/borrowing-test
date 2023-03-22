@@ -8,7 +8,7 @@ class TestRegisterUser:
         }
         registered_user = user_test_helper.register(user)
         assert registered_user['name'] == 'James'
-        assert 'id' in registered_user
-        assert registered_user['id'] != None
+        assert 'userID' in registered_user
+        assert registered_user['userID'] != None
 
-        user_test_helper.delete(registered_user['id'])
+        user_test_helper.delete(registered_user['userID'])

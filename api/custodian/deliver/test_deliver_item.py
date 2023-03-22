@@ -18,13 +18,13 @@ class TestDeliverItem:
         )
         assert 'iouid' in IOU
         assert IOU['iouid'] != None
-        assert IOU['custodianID'] == custodian['id']
-        assert IOU['userID'] == user['id']
-        assert IOU['itemID'] == item['id']
+        assert IOU['custodianID'] == custodian['custodianID']
+        assert IOU['userID'] == user['userID']
+        assert IOU['itemID'] == item['itemID']
         assert IOU['startDate'] == "2023/03/01"
         assert IOU['endDate'] == "2023/03/10"
 
-        item_test_helper.delete_item(item['id'])
+        item_test_helper.delete_item(item['itemID'])
         # TODO implement the teardown of all test cases
 
 

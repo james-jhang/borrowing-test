@@ -16,9 +16,9 @@ class TestReserveItem:
             ruser, citem, "2022/01/01", "2022/01/03"
         )
 
-        assert 'id' in reservation
-        assert reservation['id'] != None
-        assert reservation['userID'] == ruser['id']
-        assert reservation['itemID'] == citem['id']
+        assert 'reservationID' in reservation
+        assert reservation['reservationID'] != None
+        assert reservation['userID'] == ruser['userID']
+        assert reservation['itemID'] == citem['itemID']
         assert reservation['startDate'] == "2022/01/01"
         assert reservation['endDate'] == "2022/01/03"

@@ -8,5 +8,5 @@ class TestRegisterCustodian:
         }
         registered_custodian = custodian_test_helper.register(custodian)
         assert registered_custodian['name'] == 'James Jhang'
-        assert 'id' in registered_custodian
-        assert registered_custodian['id'] != None
+        assert 'custodianID' in registered_custodian
+        assert registered_custodian['custodianID'] != None
